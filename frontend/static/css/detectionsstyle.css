@@ -1,0 +1,52 @@
+.selection-button{
+    border: 0.01px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    /* &:hover,
+    &.active,
+    &:focus{
+    border: 2px solid #fff;
+    cursor: pointer;
+} */
+}
+
+.selection-button1{
+    border: 0.01px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    /* &:hover,
+    &.active,
+    &:focus{
+    border: 2px solid #fff;
+    cursor: pointer;
+} */
+}
+
+.upload-csv-button{
+    border: 0.01px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+
+
+.apply-button{
+    border: 0.01px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+
+.select-model-container{
+    grid-column-gap: 5px;
+    display: flex;
+}
+
+.select-side-channel-container{
+    grid-column-gap: 5px;
+    display: flex;
+}
+
+.upload-csv-form{
+    align-items: center;
+    grid-column-gap: 10px;
+    display: flex;
+}

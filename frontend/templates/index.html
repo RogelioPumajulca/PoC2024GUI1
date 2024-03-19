@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('send_static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="test" class="container">
+        <p>{{ flaskGreeting }}</p>
+        <p>[[ vueGreeting ]]</p>
+    </div>
+
+    <div id="module1" class="container">
+        <p>Module 1 running, current status: [[ module1_status ]]</p>
+    </div>
+
+    <div id="module2" class="container">
+        <p>Module 2 running, current status: [[ module2_status ]]</p>
+    </div>
+
+    <div id="alertTable">
+        <h2>Select Alerts</h2>
+        <form @submit.prevent="submitForm">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Alert Name</th>
+                        <th>Alert Type</th>
+                        <th>Severity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(alert, index) in alerts" :key="index">
+                        <td><input type="checkbox" v-model="selectedAlerts" :value="alert"></td>
+                        <td>[[ alert.name ]]</td>
+                        <td>[[ alert.type ]]</td>
+                        <td>[[ alert.severity ]]</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>High severity alerts go to Module 1</p>
+            <p>Medium severity alerts go to Module 2</p>
+            <button type="submit">Send to Modules</button>
+        </form>
+    </div>
+
+    <div id="moduleButtons">
+        <button onclick="location.href='/module1'" type="button">Go to Module 1</button>
+        <button onclick="location.href='/module2'" type="button">Go to Module 2</button>
+    </div>
+    <div id="changemoduleButtons">
+        <button onclick="location.href='/detectionmodule'" type="button">Go to DetectionModule</button>
+    </div>
+    <div id="changemoduleButtons">
+        <button onclick="location.href='/phoenix'" type="button">Go to Phoenix</button>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="{{ url_for('send_static', filename='js/index.js') }}"></script>
+    <script src="{{ url_for('send_static', filename='js/module1.js') }}"></script>
+    <script src="{{ url_for('send_static', filename='js/module2.js') }}"></script>
+</body>
+
+</html>
