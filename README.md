@@ -1,6 +1,6 @@
 # PoC 2024 - GUI
 
-A web-based graphical user interface (GUI) for the PoC 2024 w/ NSERC/Ericsson Industrial Research Chair
+A web-based graphical user interface (GUI) for the PoC 2024 
 
 #### Authors
 Bergen Davis, Rogelio Pumajulca, Jainil Shah
